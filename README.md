@@ -12,3 +12,7 @@ Based on the tests and the attached script, you can see the results of the same 
 1. The latency is slightly slower, meaning the time for the process to start until the start of reading the records.
 2. Requires additional functionality that defines the distributed method, according to which the run will divide the records of the file between the processors. In this test, I set it according to the number of lines in the file, but it can also be defined by a date column, etc.
 3. The total run time was significantly reduced and almost divided itself by the number of processors on which it works.
+
+## Attachments
+* The CSV file was taken from the KAGGLE data repository named Airline Dataset, which was published by SOURAV BANERJEE.
+* It is important to check how many processors the computer on which you are running the script contains.
