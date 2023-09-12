@@ -6,6 +6,12 @@ When working with big data, it is essential to ensure that the processes are as 
 PySpark provides a syntax for distributed processing, but sometimes not all libraries can work with Pyspark.
 I'm sharing the tests I conducted for distributed execution, where I directly used the computer's processor and worked in parallel with its workers.
 
+## Architecture
+The process consists of two MICRO SERVICES.
+The first one is responsible for splitting the records between the different processors by adding a column that indicates which processor will work on that record. This is actually the distributed process.
+The second one is responsible for enabling parallel work using the different processors of the computer.
+Attached is a drawing to simplify the process.
+
 ## Result
 Reading and printing 1000 records from a CSV file with a wait time of 0.1 seconds will take about 1.5 minutes. The use is with one processor as a thread process.
 Based on the tests and the attached script, you can see the results of the same read using distributed and parallel work using the computer's workers:
